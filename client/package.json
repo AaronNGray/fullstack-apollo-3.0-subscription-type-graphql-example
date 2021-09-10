@@ -14,7 +14,7 @@
     "react-apollo": "^2.2.4",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",
-    "subscriptions-transport-ws": "^0.9.15"
+    "subscriptions-transport-ws": "^0.9.19"
   },
   "scripts": {
     "start": "react-scripts start",

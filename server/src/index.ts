@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import express from 'express';
 import { createServer } from 'http';
 import { execute, subscribe } from 'graphql';
@@ -23,8 +24,6 @@ const resolvers = {
   },
 };
 */
-console.log("MessageResolver = ", MessageResolver);
-
 ( async () => {
 
     const schema = await buildSchema({ resolvers:[MessageResolver] });

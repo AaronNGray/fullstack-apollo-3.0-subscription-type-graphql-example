@@ -1,8 +1,16 @@
-import { ObjectType, Field, Resolver, Query, Subscription, Arg } from 'type-graphql';
+import { InputType, ObjectType, Field, Resolver, Query, Subscription, Root, Arg } from 'type-graphql';
 import 'reflect-metadata';
 
 @ObjectType()
 export class Message {
+    @Field(type => Number)
+    id: Number = 0
+    @Field(type => String)
+    content: String = ""
+};
+
+@InputType()
+export class MessageInput {
     @Field(type => Number)
     id: Number = 0
     @Field(type => String)
@@ -23,10 +31,9 @@ export class MessageResolver {
         topics: "MESSAGE_CREATED"
     })
     messageCreated(
-        @Arg("message", type => Message) message : Message
+        @Arg("message", type => MessageInput) message : Message
     ): Message {
         console.log(message);
         return message;
     }
-
 };
