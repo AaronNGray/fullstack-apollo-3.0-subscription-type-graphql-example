@@ -1,8 +1,8 @@
-# fullstack-apollo-subscription-example
+# fullstack-apollo-3.1-subscription-example
 
 [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
 
-A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
+A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions.
 
 ## Installation
 
