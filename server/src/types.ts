@@ -31,9 +31,9 @@ export class MessageResolver {
         topics: "MESSAGE_CREATED"
     })
     messageCreated(
-        @Arg("message", type => MessageInput) message : Message
+        @Root() message : Message
     ): Message {
-        console.log(message);
+        console.log("messageCreated():-", message);
         return message;
     }
 };
