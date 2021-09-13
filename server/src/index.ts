@@ -10,9 +10,6 @@ import { buildSchema } from 'type-graphql';
 
 import { MessageResolver } from './types';
 
-const app = express();
-
-const pubsub = new PubSub();
 const MESSAGE_CREATED = 'MESSAGE_CREATED';
 
 /*
@@ -25,8 +22,14 @@ const resolvers = {
 };
 */
 ( async () => {
+    const app = express();
 
-    const schema = await buildSchema({ resolvers:[MessageResolver] });
+    const pubSub = new PubSub();
+
+    const schema = await buildSchema({
+        resolvers:[MessageResolver],
+        pubSub
+    });
 
     const server = new ApolloServer({
         schema
@@ -71,7 +74,7 @@ const resolvers = {
     let id = 2;
 
     setInterval(() => {
-      pubsub.publish(MESSAGE_CREATED, {
+      pubSub.publish(MESSAGE_CREATED, {
         messageCreated: { id, content: new Date().toString() },
       });
 
