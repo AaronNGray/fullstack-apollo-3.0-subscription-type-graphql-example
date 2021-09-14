@@ -1,7 +1,5 @@
 # fullstack-apollo-3.0-subscription-type-graphql-example
 
-[![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
-
 A minimal Apollo Server 3 with Apollo Client 3 application with subscriptions.
 
 ## Installation
